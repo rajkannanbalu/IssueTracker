@@ -1,0 +1,51 @@
+
+    <div  class="register">
+    <form name="registerForm" id="register" ng-submit="registerTicket()">
+   
+      <div class="col-md-6">
+        <h3 class="dark-grey">Register a Ticket</h3>
+        
+        <div class="form-group col-lg-12">
+          <label>Title</label>
+          <input type="text" name="" class="form-control" ng-model="title" id="title" value="" required>
+        </div>
+        
+        <div class="form-group col-lg-12">
+          <label>Reporter</label>
+          <input type="text" name="reporter" class="form-control" ng-model="reporter" id="title" value="" required>
+        </div>
+
+        <div class="form-group col-lg-6">
+          <label>Severity</label>
+          <select class="form-control" ng-model="severity">
+            <option value="critical" >Critical</option>
+            <option value="major">Major</option>
+            <option value="minor">Minor</option>
+          </select>
+        </div>
+        
+        <div class="form-group col-lg-6">
+          <label>Assign to</label>
+          <select class="form-control" ng-model="assignee">
+            <option value="Developer" selected="selected">Developer</option>
+            <option value="Testing">Testing</option>
+            <option value="System">System</option>
+          </select>
+        </div>
+                
+        <div class="form-group col-lg-6">
+        <label>Description of issue</label>
+
+        <textarea class="form-control" style="width:600px;height:150px;" ng-model="description" placeholder="Enter description">
+        </textarea>
+
+        </div>  
+
+        <div class="form-group col-lg-12">
+          <button type="submit" id="submit"  class="btn btn-default">Submit</button>      
+        </div> 
+
+      </div>
+    </form>
+
+ </div>   

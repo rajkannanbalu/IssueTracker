@@ -1,0 +1,40 @@
+
+<section id="addTicket">
+    <h1 class="pull-left">{{title}}</h1>
+    <a ng-href="#/create" class="btn btn-primary pull-right" id="createTicket">Register a ticket</a>
+</section>
+
+<section  id="ticket-list">
+    <div id="ticket-filter-box">
+        <label for="ticket-filter">Search Tickets: </label>
+        <input type="text" id="ticket-filter" ng-model="search" class="search-query" placeholder="Search">
+    </div>
+    <h2 class="pull-left">Tickets</h2>
+    <table class="table">
+        <thead>
+        	<th scope='col'> No. </th>
+            <th scope="col" class="first">Title</th>
+            <th scope="col">Severity</th>
+            <th scope="col">Assignee</th>
+            <th scope="col">State</th>
+            <th scope="col">Reporter</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="issue in IssueTickets | filter:search"  ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index)">
+  						<td>{{$index}}</td>
+  						<td>{{ issue.titl }}</td>
+    					<td>{{ issue.severity }}</td>
+    					<td>{{ issue.assignee }}</td>
+    					<td>{{ issue.state }}</td>
+    					<td>{{ issue.reporter }}</td>
+    					<td>
+                    		<a href="#/edit/{{ issue.$id }}" class="edit-btn" ng-if="issue.state == 'Open' || issue.state =='In Progress'">
+                        	<span class="visuallyhidden">Edit {{$index}}</span>
+                    		</a>
+                    
+                		</td>
+  			</tr>
+        </tbody>
+    </table>
+</section>
+

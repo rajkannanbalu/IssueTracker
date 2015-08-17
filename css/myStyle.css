@@ -1,0 +1,19 @@
+.form-control > severity{
+	
+	text-align: center;
+	width: 20px;
+	height: 30px;
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+#addTicket {
+
+	margin-top: 40px;
+}
+

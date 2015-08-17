@@ -1,0 +1,35 @@
+<html>
+
+<head>
+   <script src="js/mySample.js"></script>
+   <title>Issue Tracking</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <script type="text/javascript" src="js/angular.min.js"></script>
+   <script type="text/javascript" src="js/angular-resource.min.js"></script>
+   <script type="text/javascript" src="js/angular-route.min.js"></script>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/angularController.js"></script>
+   <script src="node_modules/firebase/firebase.js"></script>
+   <script src="node_modules/firebase-simple-login/firebase-simple-login.js"></script>
+   <script src="node_modules/mockfirebase/dist/mockfirebase.js"></script>
+   <script src="node_modules/angularfire/dist/angularfire.min.js"></script>
+   <link rel="stylesheet" typbe="text/css" href="css/myStyle.css">
+</head>
+<body ng-app="IssueTrackingApp">
+
+            <header class="header">
+                <a ng-href="#/main"> Home <span class="visuallyhidden"> </span></a>
+      
+            </header>
+            <main class="main" id="main">
+                <div ng-view=""></div>
+            </main>
+           
+
+</body>
+
+
+</html>
